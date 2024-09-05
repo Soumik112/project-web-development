@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>BMI</title>
+    <link rel="stylesheet" href="5.css">
+
+</head>
+
+<body background="assets/bmi.jpg">
+
+<center>
+    <div class="card" style="width: 50rem" >
+    <div class="card-body">
+        <h1 class="h1">BMI CALCULATOR</h1>
+        <img class="vector_2" style="height: 300px; width: 350px" src="./B2.png" id="displayImage"  > <br><br>
+        <label class="w"><b>Enter your weight</b></label>
+        <br>
+        <input type="number" id="Weight" class="form-control1 " style="width: 400px;height: 50px" ><br>
+        <label class="h" ><b>Enter your Height</b></label>
+        <br>
+        <input type="number" id="Height" class="form-control2" style="width: 400px;height: 50px" >
+        <br><br>
+        <button onclick="calculateBMI()" class="form-control" style="width: 30%;background: #0a53be;color: white">Submit</button>
+        <br>
+        <textarea id="disp" class="form-control3" style="width: 400px;height: 50px" ></textarea>
+        <br>
+        <a href="link%201.html" ><button type="submit" class="btn btn-submit">next</button></a>
+    </div>
+</div>
+</center>
+<script>
+    function calculateBMI() {
+        let Height = parseInt(document.getElementById("Height").value)
+        let weight = parseInt(document.getElementById("Weight").value)
+        let bmi = weight / ((Height / 100) * (Height / 100));
+        document.getElementById("disp").innerHTML = "Your BMI is: " + bmi.toFixed(2);
+        let value = parseFloat(document.getElementById("disp").value)
+        let image = document.getElementById("displayImage");
+        if (bmi <= 18) {
+            image.src = "assets/bmi5.png";
+
+        } else if (bmi > 18 && bmi < 24) {
+            image.src = "assets/bmi1.png";
+
+        } else if (bmi >= 25 && bmi <= 29) {
+            image.src = "assets/bmi4.png";
+
+        } else if (bmi > 29) {
+            image.src = "assets/bmi3.png"; // Default image if value is between 18 and 25
+
+        }
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,351 @@
+        /* ===== Root Variables ===== */
+:root {
+    --white-color: #ffffff;
+    --black-color: #000000;
+    --primary-color: #73a733;
+    --secondary-color: #3a572a;
+    --text-color: #2c2e2b;
+    --h1-font: "Baskervville SC", serif;
+    --text-font: "Spectral", serif;
+    --p-font-size: 1.1rem;
+    --transition-duration: 0.3s;
+}
+
+/* ===== Global Styles ===== */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: var(--text-font);
+}
+
+body{
+    background: url(bg.png);
+    color: var(--text-color);
+    overflow: hidden;
+}
+
+/* ===== Header Styles ===== */
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img{
+    width: 100px;
+}
+
+.navbar a{
+    font-size: var(--p-font-size);
+    font-weight: 500;
+    color: var(--black-color);
+    margin: 0 15px;
+    transition: color var(--transition-duration) ease;
+}
+
+.navbar a:hover{
+    color: var(--primary-color);
+}
+
+.navbar .active{
+    color: var(--primary-color);
+}
+
+.nav-right a{
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     height: 45px;
+     width: 45px;
+     background-color: var(--primary-color);
+     color: var(--white-color);
+     margin-left: 10px;
+     border-radius: 50%;
+     font-size: 20px;
+     transition: background-color var(--transition-duration) ease;
+     transition: all.50s ease;
+}
+
+.nav-right a:hover{
+    background-color: var(--secondary-color);
+    transform: translateY(-5px);
+}
+
+/* ===== Hero Section Styles ===== */
+
+.hero{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 150px 5% 50px;
+    align-items: center;
+}
+
+.hero-text{
+    flex: 1 1 400px;
+    margin-bottom: 50px;
+}
+
+.hero-text h4{
+    font-size: 1.2rem;
+    color: var(--black-color);
+    margin-bottom: 10px;
+}
+
+.hero-text h1{
+    font-size: 4.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    line-height: 1.2;
+    font-family: var(--h1-font);
+}
+
+.hero-text p{
+    font-size: var(--p-font-size);
+    color: var(--black-color);
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.size{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.size h5{
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-right: 10px;
+}
+
+.size label{
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.size input[type="checkbox"]{
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 50%;
+    margin-right: 8px;
+    cursor: pointer;
+    transition: background-color var(--transition-duration) ease;
+}
+
+.size input[type="checkbox"]:checked{
+    background-color: var(--primary-color);
+}
+
+.button-container{
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn-cart,
+.btn-menu{
+    padding: 12px 25px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 5px;
+    border: 2px solid var(--primary-color);
+    cursor: pointer;
+    transition: all var(--transition-duration) ease;
+    transition: all .50s ease;
+}
+
+.btn-cart{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.btn-cart:hover{
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transform: translateY(-5px);
+}
+
+.btn-menu{
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.btn-menu:hover{
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--white-color);
+    transform: translateY(-5px);
+}
+/* ===== Hero Image Styles ===== */
+
+.hero-img{
+    flex: 700px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-img img{
+    width: 700px;
+    height: auto;
+}
+
+
+/* ===== Hero Banner Links ===== */
+
+
+.banner-link{
+    position: absolute;
+    top: 30%;
+    padding: 0 9%;
+    right: -10%;
+    transform: translateY(-50%);
+}
+
+.banner-link i{
+    display: block;
+    margin: 20px 0;
+    font-size: 20px;
+    color: var(--secondary-color);
+    transition: all .5s ease;
+}
+
+.banner-link i:hover{
+    color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+
+/* ===== Coupon Card Styles ===== */
+.coupon-card{
+    position: absolute;
+    bottom: -120px;
+    right: -50px;
+    width: 400px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border: 2px dashed var(--primary-color);
+    backdrop-filter: blur(32px);
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%, 100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+}
+
+.coupon-header{
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    border-bottom: 2px dashed var(--primary-color);
+    padding-bottom: 10px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.coupon-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.coupon-image{
+    width: 70px;
+    height: 70px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    border: 2px solid var(--secondary-color);
+    box-shadow: 0 4px 15px rgba( 0, 0, 0, 0.1);
+}
+
+.coupon-details{
+    flex-grow: 1;
+    margin-left: 15px;
+}
+
+.coupon-details h3{
+    font-size: 15px;
+    color: var(--black-color);
+    margin-bottom: 5px;
+}
+
+.coupon-details .price{
+    font-size: 14px;
+    color: #999;
+    text-decoration: line-through;
+    margin-bottom: 5px;
+}
+
+.coupon-details .discounted-price{
+    font-size: 20px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.get-coupon-btn{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color var(--transition-duration) ease;
+    margin-top: 10px;
+    display: inline-block;
+    transition: all .50s ease;
+}
+
+.get-coupon-btn:hover{
+    background-color: var(--secondary-color);
+    transform: translateY(-5px);
+}
+
+.coupon-navigation{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.coupon-navigation button{
+    color: var(--black-color);
+    border: none;
+    cursor: pointer;
+    background: transparent;
+}
+
+.coupon-navigation button:hover{
+    color: var(--secondary-color);
+}

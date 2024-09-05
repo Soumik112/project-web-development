@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ===== Meta Tags ===== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ===== Page Title ===== -->
+    <title>Food</title>
+    
+    <!-- ===== CSS Stylesheets ===== -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- ===== AOS Animation Library ===== -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- ===== Font Awesome Icons ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    
+    <!-- ===== Google Fonts ===== -->
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Spectral:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- ===== Header Section ===== -->
+    <header data-aos="fade-down">
+        <div class="logo">
+            <img src="logo.png">
+        </div>
+        <nav class="navbar">
+            <a href="#" class="active">Home</a>
+            <a href="#">About</a>
+            <a href="#">Menu</a>
+            <a href="#">Contact</a>
+        </nav>
+        <div class="nav-right">
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="#"><i class="fa-solid fa-user"></i></a>
+        </div>
+    </header>
+
+
+    <!-- ===== Hero Section ===== -->
+
+    <section class="hero">
+
+        <!-- ===== Hero Text ===== -->
+        <div class="hero-text" data-aos="fade-right">
+            <h4>Welcome tio the World of</h4>
+            <h1>Teasty & Fresh Food.</h1>
+            <p>Delicious food, deliverd fast. Satisfy your craving with our mouth-watering menu.</p>
+            <div class="size">
+                <h5>Select Size:</h5>
+                <label for="small">
+                    <input type="checkbox" id="small">Small
+                </label>
+                <label for="medium">
+                    <input type="checkbox" id="medium">Medium
+                </label>
+                <label for="large">
+                    <input type="checkbox" id="large">Large
+                </label>
+            </div>
+            <hr>
+            <div class="button-container">
+                <button class="btn-cart">Add to Cart</button>
+                <button class="btn-menu">View Menu</button>
+            </div>
+        </div>
+
+       <!-- ===== Hero Image ===== -->
+
+        <div class="hero-img" data-aos="fade-left">
+            <img src="hero.png">
+            <div class="banner-link">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-square-whatsapp"></i></a>
+                <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+            </div>
+
+      <!-- ===== Hero Coupon ===== -->
+
+            <div class="coupon-card" id="coupon-card">
+                <div class="coupon-header">Exclusive Offer!</div>
+                <div class="coupon-content">
+                    <div class="coupon-image"></div>
+                    <div class="coupon-details">
+                        <h3>Buttermilk fried chicken</h3>
+                        <div class="price">$25.00</div>
+                        <div class="discounted-price">$19.99</div>
+                    </div>
+                    <a href="#" class="get-coupon-btn">Get Coupon</a>
+                </div>
+                <div class="coupon-navigation">
+                    <button id="prev-btn"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button id="next-btn"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+
+
+    <!-- ===== AOS Animation Library ===== -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <!-- ===== Script  JS  ===== -->
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
